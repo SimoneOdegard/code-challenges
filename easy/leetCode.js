@@ -36,3 +36,28 @@ function twoSum (nums, target) {
 }
 
 console.log(twoSum(nums, target));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 2  ** //
+// **  R E M O V E   D U P L I C A T E S  ** //
+
+// Remove duplicate numbers from an array.
+
+// Example 1:
+// Input: nums = [1, 1, 2]
+// Output: [1, 2]
+
+// INCOMPETE!!!!!
+
+var removeDuplicates = function(nums) {
+  let result = [];
+  for (let i = 0; i < nums; i++) {
+      if (nums[i] != nums[i]-1) {
+          result.push(nums[i]);
+          return result;
+      }
+  }
+};
+
+console.log(removeDuplicates(nums));
