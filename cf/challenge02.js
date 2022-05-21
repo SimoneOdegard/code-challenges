@@ -176,7 +176,19 @@ const append = (arr1, arr2) => {
 
 append(arr1, arr2);
 
-console.log(arr1);
+// concat
+let a = [1, 2, 3];
+let b = [4, 5, 6]
+a = a.concat(b);
+
+// spread
+let c = [5, 6, 7];
+let d = [8, 9, 10]
+let spreadArr = [...c, ...d];
+
+console.log('append', arr1);
+console.log('concat--', a);
+console.log('spread--', spreadArr)
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
