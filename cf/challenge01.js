@@ -8,7 +8,7 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
-let arr = [1, 2, 3, 4, 5]
+let arr = [1, 2, 3, 4, 5];
 
 // for loop version
 function addOne(arr) {
@@ -193,7 +193,7 @@ let inventory = [{ name: 'apples', available: true }, { name: 'pears', available
 function createList(inventory) {
   let answer = [];
   inventory.forEach(i => {
-    if (i.available == true) {
+    if (i.available === true) {
       answer.push(i.name);
     }
   })
@@ -221,11 +221,11 @@ let newArr = [3, 5, 8, 10, 15, 22, 45]
 const fizzbuzz = (newArr) => {
   let answer = [];
   newArr.forEach(i => {
-    if (i % 5 == 0 && i % 3 == 0) {
+    if (i % 5 === 0 && i % 3 === 0) {
       answer.push('fizzbuzz');
-    } else if (i % 5 == 0) {
+    } else if (i % 5 === 0) {
       answer.push('buzz');
-    } else if (i % 3 == 0) {
+    } else if (i % 3 === 0) {
       answer.push('fizz');
     } else if (i % 5 !== 0 && i % 3 !== 0) {
       answer.push('nope');
