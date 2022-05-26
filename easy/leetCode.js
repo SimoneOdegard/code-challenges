@@ -115,7 +115,4 @@ var isPalindrome = function(x) {
   return true;
 };
 
-// variable to call the function
-let palindrome = isPalindrome(x);
-
-console.log('is palindrome', palindrome);
+console.log('is palindrome', isPalindrome(x));
