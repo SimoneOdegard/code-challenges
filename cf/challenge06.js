@@ -234,7 +234,7 @@ const houseSize = (arr) => {
     let spouse = values[1];
     let children = values[2];
     let house = values[3];
-    sizes.push({house});
+    console.log('123', values);
     // count charName
     members++;
     if (spouse !== null) {
@@ -245,7 +245,7 @@ const houseSize = (arr) => {
         members++;
       }
     }
-    sizes.push({members});
+    sizes.push({house, members});
     console.log('!!!!', members);
     // NOT CORRECT! counted the total members not members of each individual house.
   }
