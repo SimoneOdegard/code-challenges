@@ -154,12 +154,16 @@ var numberOfSteps = function(num) {
       count++;
     }
 
-    // if num is odd, then minus 1. increase count
-    else (num % 2 !== 0)
+    // else num is odd, then minus 1. increase count.
+    else {
       num = num - 1;
       count++
+    }
   }
   return count;
 };
 
-console.log('steps to zero--', numberOfSteps(14));
+// 14, outcome would be 6
+// 8, outcome would be 4
+
+console.log('steps to zero--', numberOfSteps(8));
