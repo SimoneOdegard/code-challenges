@@ -140,14 +140,21 @@ console.log('is palindrome', isPalindrome(x));
 var numberOfSteps = function(num) {
   let count = 0;
 
+  // if num is 0, then you don't have to do any steps to get to 0
   if (num === 0) {
     return 0;
   }
+
+  // while num is not equal to 0 you need to continue with the loop
   while (num !== 0) {
+
+    // if num is even, then divide by 2. increase count.
     if (num % 2 === 0) {
       num = num/2;
       count++;
     }
+
+    // if num is odd, then minus 1. increase count
     else (num % 2 !== 0)
       num = num - 1;
       count++
