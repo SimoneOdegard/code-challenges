@@ -253,9 +253,14 @@ Write a function that, given an array of numbers as input, uses reduce to calcul
 Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
+let avgArr = [1, 3, 5, 7];
+// 16
+
 const calculateAverage = (arr) => {
-  // Solution code here...
+  return arr.reduce((a, b) => (a + b)) / arr.length;
 };
+
+console.log('8. calculate average--', calculateAverage(avgArr));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -265,13 +270,29 @@ Write a function named countPrimeNumbers that, given an array elements as input,
 You are welcome to use the provided isPrime function.
 ------------------------------------------------------------------------------------------------ */
 
-const isPrime = (value) => {
+let primeArr = [1, 2, 13, 64, 45, 56, 17, 8]
+// 3
 
+const isPrime = (value) => {
+  for (let i = 2; i < value; i++) {
+    if (value % i === 0) {
+      return false;
+    }
+  }
+  return value > 1;
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  let count = 0;
+  return arr.reduce((answerSoFar, value) => {
+    if (isPrime(value)) {
+      count++;
+    }
+    return count;
+  }, 0);
 };
+
+console.log('9. count prime numbers--', countPrimeNumbers(primeArr));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -312,9 +333,18 @@ const snorlaxData = {
   weight: 4600,
 };
 
+let statName = 'speed';
+
 const extractStat = (statName, arr) => {
-  // Solution code here...
+  return arr.reduce((answerSoFar, value) => {
+    if (value.stat.name === statName) {
+      answerSoFar = value;
+    }
+    return answerSoFar;
+  })
 };
+
+console.log('10. extrat stat--', extractStat(statName, snorlaxData.stats));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
@@ -327,8 +357,30 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = (arr) => {
-  // Solution code here...
+  let answer = [];
+  let hasA = arr.filter(i => i.name.includes('a'));
+  console.log(hasA);
+  return hasA.reduce((a, b) => {
+    if (b.children) {
+      for (let i = 0; i < b.children.length; i++) {
+        answer.push(b.children[i]);
+      }
+    }
+    return hasA, answer;
+  });
 };
+
+// const extractChildren = (arr) => {
+//   let answer = [];
+//   let hasA = arr.filter(i => {
+//     if (i.name.includes('a')) {
+//       answer.push(i.name);
+//     }
+//   })
+//     return answer;
+// };
+
+console.log('11. extract children--', extractChildren(characters));
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
