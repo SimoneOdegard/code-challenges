@@ -370,6 +370,7 @@ const extractChildren = (arr) => {
   });
 };
 
+
 // const extractChildren = (arr) => {
 //   let answer = [];
 //   let hasA = arr.filter(i => {
