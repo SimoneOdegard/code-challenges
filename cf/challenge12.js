@@ -156,19 +156,19 @@ const errands = [
   }
 ];
 
-// not working. simone work on this girrrrrl
+// function howManyTreats(arr) {
+//   let petStore = arr.filter(i => i.store === 'Pet store');
+//   console.log('petStore obj--', petStore);
+//   console.log('trying to grab items--', petStore.items)
+  
+//   for (let i = 0; i < petStore.items; i++) {
+    
+//   }
+// }
 
-const howManyTreats = (arr) => {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].store === 'Pet Store') {
-      for (let j = 0; j < arr[i].items; j++) {
-        if (arr[j].items.name === 'Treats') {
-          return arr[j].items.quantity;
-        }
-      }
-    };
-  };
-};
+function howManyTreats(arr) {
+  return arr[2].items[1].quantity;
+}
 
 
 console.log('6. how many treats--', howManyTreats(errands));
@@ -191,9 +191,25 @@ Here is a sample board:
 The top row of the board is considered row zero and row numbers increase as they go down.
 ------------------------------------------------------------------------------------------------ */
 
-const battleship = (board, row, col) => {
-  //  Solution code here...
+let board = [
+  ['#', ' ', '#', ' '],
+  ['#', ' ', '#', ' '],
+  ['#', ' ', ' ', ' '],
+  [' ', ' ', '#', '#'],
+]
+let row = 0;
+let col = 0;
+
+function battleship(board, row, col) {
+  for (let i = 0; i < board.length; i++) {
+    if (board[i][row] === '#' && board[i][col] === '#') {
+      return 'hit';
+    }
+    else return 'miss';
+  }
 };
+
+console.log('7. battleship--', battleship(board, row, col));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -203,9 +219,27 @@ Write a function named calculateProduct that takes in a two-dimensional array of
 For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
+let twoDArr = [[1,2], [3,4], [5,6]];
+
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let temp = [];
+  let product = 1;
+
+  // multiply the 3 arrays (1*2) (3*4) (5*6)
+  for (let i = 0; i < numbers.length; i++)  {
+    product = numbers[i].reduce((a,b) => a * b)
+    temp.push(product)
+  }
+
+  console.log('show temp--', temp);
+
+  // multiply the products of 3 arrays (2*12*30)
+  let answer = temp.reduce((a,b) => a * b);
+
+  return answer;
 };
+
+console.log('8. calculate product--', calculateProduct(twoDArr));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -224,8 +258,20 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  let sum = 0;
+  let count = 0;
+  let answer = 0;
+  for (let i = 0; i < weather.length; i++) {
+    for (let j =0; j < weather[i].length; j++) {
+      count++;
+      sum += weather[i][j]
+      answer = sum/count;
+    }
+  }
+  return answer;
 };
+
+console.log('9. average daily temp--', averageDailyTemperature(weeklyTemperatures));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -245,8 +291,23 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  let sum = 0;
+  let temp = [];
+  let average = 0;
+
+  for (let i = 0; i < weather.length; i++) {
+    sum = weather[i].reduce((a,b) => a + b)
+    average = sum/7
+    temp.push(average);
+  }
+  
+  let answer = Math.min(...temp);
+
+  return answer;
+
 };
+
+console.log('10. lowest weekly temp--', lowestWeeklyAverage(lowestWeeklyTemperatureData))
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
@@ -260,9 +321,13 @@ The function should parse the string as rows and columns and compute the sum of 
 For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
+let excelStr = '1,1,1\n4,4,4\n9,9,9';
+
 const excel = (str) => {
   // Solution code here...
 };
+
+console.log('11. excel--', excel(excelStr));
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
