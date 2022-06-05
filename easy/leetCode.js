@@ -167,3 +167,39 @@ var numberOfSteps = function(num) {
 // 8, outcome would be 4
 
 console.log('steps to zero--', numberOfSteps(8));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 5  ** //
+// **  L O N G E S T   C O M M O N   P R E F I X  ** //
+
+// Write a function to find the longest common prefix string amongst an array of strings.
+
+// If there is no common prefix, return an empty string "".
+
+// Example 1:
+// Input: strs = ["flower","flow","flight"]
+// Output: "fl"
+
+// Example 2:
+// Input: strs = ["dog","racecar","car"]
+// Output: ""
+// Explanation: There is no common prefix among the input strings.
+
+let strs1 = ["flower","flow","flight"];
+let strs2 = ["dog","racecar","car"];
+
+function longestCommonPrefix(arr) {
+  let answer = '';
+  for (let i = 0; i < arr[0].length; i++) {
+    for (let j = 1; j < arr.length; j++) {
+      if (arr[0][i] !== arr[j][i]) {
+        return answer;
+      }
+    }
+    answer += arr[0][i];
+  }
+  return answer;
+};
+
+console.log('longest common prefix--', longestCommonPrefix(strs1))
