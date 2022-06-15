@@ -205,3 +205,56 @@ function leftRotation(arr, d) {
 };
 
 console.log('left rotation--', leftRotation(rotation, 2));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 6  ** //
+// **  B U B B L E   S O R T  ** //
+
+// for (int i = 0; i < n; i++) {
+//   for (int j = 0; j < n - 1; j++) {
+//       // Swap adjacent elements if they are in decreasing order
+//       if (a[j] > a[j + 1]) {
+//           swap(a[j], a[j + 1]);
+//       }
+//   }
+// }
+
+// Given an array of integers, sort the array in ascending order using the Bubble Sort algorithm above. Once sorted, print the following three lines:
+
+// 1. Array is sorted in numSwaps swaps., where numSwaps is the number of swaps that took place.
+// 2. First Element: firstElement, where firstElement is the first element in the sorted array.
+// 3. Last Element: lastElement, where lastElement is the last element in the sorted array.
+// HINT: add a variable that keeps a tally of all swaps that occur during execution
+
+let bubble = [3, 2, 1];
+// 3 swaps will take place
+
+function bubbleSort(arr) {
+  let swaps = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        swap(a[j], a[j + 1]);
+      }
+    }
+  }
+};
+
+console.log('bubble sort--', bubbleSort(bubble));
+
+
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 X  ** //
+// **  2 D   A R R A Y  ** //
+
+// There are 16 hourglasses in arr. An hourglass sum is the sum of an hourglass' values. Calculate the hourglass usm for every hourglass in arr. Then print the maximum hourglass sum. The array will always be 6x6.
+
+// Example hourglass shape
+// 1 2 3
+//   4 
+// 1 2 3
+
+// return the maximum hourglass sum
