@@ -229,19 +229,31 @@ console.log('left rotation--', leftRotation(rotation, 2));
 
 let bubble = [3, 2, 1];
 // 3 swaps will take place
+let bubble2 = [4, 2, 3, 1];
+// 5 swaps
+let bubble3 = [1, 2, 3];
+// 0 swaps
 
 function bubbleSort(arr) {
   let swaps = 0;
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n - 1; j++) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < (arr.length - i - 1); j++) {
       if (arr[j] > arr[j + 1]) {
-        swap(a[j], a[j + 1]);
+        swaps++;
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
       }
     }
   }
+  console.log(`Array is sorted in ${swaps} swaps.`);
+  console.log('First Element:', arr[0]);
+  console.log('Last Element:', arr[arr.length - 1]);
+  // return ['Number of Swaps:', swaps, 'First Element:', arr[0], 'Last Element:', arr[arr.length - 1]];
+  return arr;
 };
 
-console.log('bubble sort--', bubbleSort(bubble));
+console.log('bubble sort--', bubbleSort(bubble2));
 
 
 
