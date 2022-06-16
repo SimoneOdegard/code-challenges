@@ -255,18 +255,41 @@ function bubbleSort(arr) {
 
 console.log('bubble sort--', bubbleSort(bubble2));
 
-
-
 // ======================================================= //
 
-// **  C H A L L E N G E   0 0 X  ** //
-// **  2 D   A R R A Y  ** //
+// **  C H A L L E N G E   0 0 7  ** //
+// **  M A R K   A N D   T O Y S  ** //
 
-// There are 16 hourglasses in arr. An hourglass sum is the sum of an hourglass' values. Calculate the hourglass usm for every hourglass in arr. Then print the maximum hourglass sum. The array will always be 6x6.
+// Mark and Jane are very happy after having their first child. Their son loves toys, so Mark wants to buy some. There are a number of different toys lying in front of him, tagged with their prices. Mark has only a certain amount to spend, and he wants to maximize the number of toys he buys with this money. Given a list of toy prices and an amount to spend, determine the maximum number of gifts he can buy.
 
-// Example hourglass shape
-// 1 2 3
-//   4 
-// 1 2 3
+// Note Each toy can be purchased only once.
 
-// return the maximum hourglass sum
+// Example
+// prices = [1, 2, 3, 4];
+// k = 7;
+
+// The budget is 7 units of currency. He can buy items that cost [1, 2, 3] for 6, or [3, 4] for 7 units. The maximum is 3 items.
+
+let toyPrices = [1, 2, 3, 4];
+let toyPrices2 = [3, 7, 2, 9, 4];
+let toyPrices3 = [5, 1, 6, 1, 7];
+
+function maximumToys(prices, k) {
+  let items = 0;
+  let sum = 0;
+  let sorted = prices.sort((a, b) => a - b);
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i] < k) {
+      sum += sorted[i];
+      if (sum <= k) {
+        items++;
+      } else break;
+    }
+    if (sorted[i] === k) {
+      return 1;
+    }
+  }
+  return items;
+};
+
+console.log('mark and toys--', maximumToys(toyPrices3, 5));
