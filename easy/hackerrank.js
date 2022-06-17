@@ -317,7 +317,7 @@ let stringB = 'abc';
 
 let stringA2 = 'fcrxzwscanmligyxyvym';
 let stringB2 = 'jxwtrhvujlmrpdoqbisbwhmgpmeoke';
-// sample output: 30?
+// sample output: 30
 
 function makeAnagram(a, b) {
   let count = 0;
