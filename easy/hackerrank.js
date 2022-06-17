@@ -73,11 +73,11 @@ function jumpingOnClouds(c) {
   let index = 0;
 
   for (let i = 0; i < c.length; i++) {
-    if (c[index+2] === 0) {
+    if (c[index + 2] === 0) {
       count++;
-      index = index+2;
+      index = index + 2;
     }
-    if (c[index+1] === 0) {
+    if (c[index + 1] === 0) {
       count++;
       index++;
     }
@@ -116,7 +116,7 @@ function countValleys(steps, str) {
   let up = 0;
   let down = 0;
   let sea = 0;
-  let valley = 0; 
+  let valley = 0;
   for (let i = 0; i < steps; i++) {
     if (str[i] === 'U') {
       up++;
@@ -172,7 +172,7 @@ function sockMatch(arr, n) {
   let count = 0;
   let sorted = arr.sort();
   for (let i = 0; i < n; i++) {
-    if (sorted[i] === sorted[i+1]) {
+    if (sorted[i] === sorted[i + 1]) {
       count++;
       i++;
     }
@@ -293,3 +293,43 @@ function maximumToys(prices, k) {
 };
 
 console.log('mark and toys--', maximumToys(toyPrices3, 5));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 8  ** //
+// **  A N A G R A M S  ** //
+
+// A student is taking a cryptography class and has found anagrams to be very useful. Two strings are anagrams of each other if the first string's letters can be rearranged to form the second string. In other words, both strings must contain the same exact letters in the same exact frequency. For example, bacdc and dcbac are anagrams, but bacdc and dcbad are not.
+
+// The student decides on an encryption scheme that involves two large strings. The encryption is dependent on the minimum number of character deletions required to make the two strings anagrams. Determine this number.
+
+// Given two strings, a and b, that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams. Any characters can be deleted from either of the strings.
+
+// Example
+// a = 'cde'
+// b = 'dcf'
+
+// delete e from a and f from b so that the remaining strings are cd and dc which are anagrams. This takes 2 character deletions.
+
+let stringA = 'cde';
+let stringB = 'abc';
+// sample output: 4
+
+let stringA2 = 'fcrxzwscanmligyxyvym';
+let stringB2 = 'jxwtrhvujlmrpdoqbisbwhmgpmeoke';
+// sample output: 30?
+
+function makeAnagram(a, b) {
+  let count = 0;
+  let sum = a.length + b.length;
+  for (let i = 0; i < a.length; i++) {
+    if (a.includes(a[i]) && b.includes(a[i])) {
+      b = b.replace(a[i], '');
+      count++;
+    }
+  }
+  let answer = sum - (count * 2);
+  return answer;
+};
+
+  console.log('anagram--', makeAnagram(stringA2, stringB2));
