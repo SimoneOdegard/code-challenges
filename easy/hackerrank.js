@@ -368,7 +368,7 @@ console.log('alternating characters--', alternatingCharacters(altStr2));
 // ======================================================= //
 
 // **  C H A L L E N G E   0 1 0  ** //
-// **  A L T E R N A T I N G  ** //
+// **  A B S O L U T E   D I F F E R E N C E  ** //
 
 // The absolute difference is the positive difference between two values a and b, is written |a-b| or |b-a| and they are equal. If a = 3 and b = 2, |3-2| = |2-3| = 1. Given an array of integers, find the minimum absolute difference between any two elements in the array.
 
