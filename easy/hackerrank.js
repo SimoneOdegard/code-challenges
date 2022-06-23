@@ -364,3 +364,32 @@ function alternatingCharacters(s) {
 };
 
 console.log('alternating characters--', alternatingCharacters(altStr2));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 0  ** //
+// **  A L T E R N A T I N G  ** //
+
+// The absolute difference is the positive difference between two values a and b, is written |a-b| or |b-a| and they are equal. If a = 3 and b = 2, |3-2| = |2-3| = 1. Given an array of integers, find the minimum absolute difference between any two elements in the array.
+
+// Example
+// arr = [-2, 2, 4]
+// There are 3 pairs of numbers [-2 - 2], [-2, 4], [2, 4]. The absolute differences for these pairs |(-2) - 2| = 4, |-2 - 4| = 6 and |2 - 4| = 2. The minimum absolute difference is 2.
+
+let absoluteArr1 = [-2, 2, 4]; // 2
+let absoluteArr2 = [3, -7, 0]; // 3
+let absoluteArr3 = [-59, -36, -13, 1, -53, -92, -2, -96, -54, 75]; // 1
+let absoluteArr4 = [1, -3, 71, 68, 17]; // 3
+
+function minimumAbsoluteDifference(arr) {
+  let newArr = [];
+  let sorted = arr.sort((a, b) => a - b);
+  for (let i = 0; i < sorted.length - 1; i++) {
+    let difference = Math.abs(sorted[i] - sorted[i+1]);
+    newArr.push(difference);
+  }
+  let answer = Math.min(...newArr);
+  return answer;
+};
+
+console.log('min absolute difference--', minimumAbsoluteDifference(absoluteArr4));
