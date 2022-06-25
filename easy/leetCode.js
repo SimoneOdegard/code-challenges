@@ -203,3 +203,29 @@ function longestCommonPrefix(arr) {
 };
 
 console.log('longest common prefix--', longestCommonPrefix(strs1))
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 6  ** //
+// **  I S   P A L I N D R O M E   ?  ** //
+
+// Given a string s consisting of words and spaces, return the length of the last word in the string.
+
+// A word is a maximal substring consisting of non-space characters only.
+
+// Example:
+// s = 'hello world'
+// output: 5
+
+// Example 2:
+// s = ' fly me to   the moon '
+// output: 4
+
+let lastWord1 = 'hello world'; // 5
+let lastWord2 = 'fly me to the moon'; // 4
+
+function lengthOfLastWord(s) {
+
+};
+
+console.log('length of last word--', lengthOfLastWord(lastWord1));
