@@ -222,10 +222,27 @@ console.log('longest common prefix--', longestCommonPrefix(strs1))
 // output: 4
 
 let lastWord1 = 'hello world'; // 5
-let lastWord2 = 'fly me to the moon'; // 4
+let lastWord2 = 'fly me to the moon '; // 4
 
+// ==== FIRST ATTEMPT ==== //
+// function lengthOfLastWord(s) {
+//   let split = s.split(' ');
+//   let lastWord = split.slice(-1);
+//   let turnIntoString = lastWord.join('');
+//   return turnIntoString.length;
+// };
+
+// ==== SECOND ATTEMPT ==== //
+// NEED TO REMOVE EXTRA SPACES FOR IT TO FULLY WORK
 function lengthOfLastWord(s) {
-
+  let noExtraSpaces = s
+    .replace(/\s+/g, " ")
+    .replace(/^\s+|\s+$/g, "");
+  let split = noExtraSpaces.split(' ');
+  let lastWord = split.slice(-1);
+  let turnIntoString = lastWord.join('');
+  return turnIntoString.length;
 };
 
-console.log('length of last word--', lengthOfLastWord(lastWord1));
+
+console.log('length of last word--', lengthOfLastWord(lastWord2));
