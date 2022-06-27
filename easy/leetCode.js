@@ -297,4 +297,15 @@ function removeElement(nums, val) {
   return answer;
 };
 
+// === REFACTOR === //
+// function removeElement(nums, val) {
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] === val) {
+//       nums.splice(i, 1);
+//       i--;
+//     }
+//   }
+//   return nums.length; <<<< makes it so you don't need a count/answer variable
+// };
+
 console.log('remove element--', removeElement(removeNums2, 2));
