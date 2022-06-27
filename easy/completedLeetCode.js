@@ -8,6 +8,7 @@
 // 005 Longest Common Prefix
 // 006 Find Last Word
 // 007 Remove Element
+// 008 Search Insert Position
 
 
 // ======================================================= //

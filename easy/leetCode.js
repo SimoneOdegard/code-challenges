@@ -279,8 +279,6 @@ console.log('length of last word--', lengthOfLastWord(lastWord2));
 let removeNums1 = [3, 2, 2, 3]; // val = 3... 2, [2, 2, _, _]
 let removeNums2 = [0, 1, 2, 2, 3, 0, 4, 2]; //val = 2 ... 5, [0, 1, 4, 0, 3, _, _, _]
 
-// answer = k
-
 // === FIRST ATTEMPT === //
 function removeElement(nums, val) {
   let answer = 0;
@@ -309,3 +307,30 @@ function removeElement(nums, val) {
 // };
 
 console.log('remove element--', removeElement(removeNums2, 2));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 8  ** //
+// **  S E A R C H   I N S E R T   P O S I T I O N  ** //
+
+// Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+
+// Example 1
+// Input: nums = [1, 3, 5, 6], target = 5
+// Output: 2
+
+// Example 2
+// Input: nums = [1, 3, 5, 6], target = 2
+// Output: 1
+
+// Example 3
+// Input: nums = [1, 3, 5, 6], target = 7
+// Output: 4
+
+let searchNums = [1, 3, 5, 6];
+
+function searchInsert(nums, target) {
+
+};
+
+console.log('search insert--', searchInsert(searchNums, 5));
