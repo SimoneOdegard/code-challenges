@@ -276,11 +276,25 @@ console.log('length of last word--', lengthOfLastWord(lastWord2));
 
 // ** NOTE ** Does not matter what you leave behind the returned k (hence why they are underscores). Elements can be returned in any order.
 
-let removeNums1 = [3, 2, 2, 3]; // val = 3... [2, 2, _, _]
-let removeNums2 = [0, 1, 2, 2, 3, 0, 4, 2]; //val = 2 ... [0, 1, 4, 0, 3, _, _, _]
+let removeNums1 = [3, 2, 2, 3]; // val = 3... 2, [2, 2, _, _]
+let removeNums2 = [0, 1, 2, 2, 3, 0, 4, 2]; //val = 2 ... 5, [0, 1, 4, 0, 3, _, _, _]
 
+// answer = k
+
+// === FIRST ATTEMPT === //
 function removeElement(nums, val) {
-
+  let answer = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === val) {
+      nums.splice(i, 1);
+      i--;
+    }
+    if (nums[i] !== val) {
+      answer++;
+    }
+  }
+  console.log(nums);
+  return answer;
 };
 
-console.log('remove element--', removeElement(removeNums1, 3));
+console.log('remove element--', removeElement(removeNums2, 2));
