@@ -207,7 +207,7 @@ console.log('longest common prefix--', longestCommonPrefix(strs1))
 // ======================================================= //
 
 // **  C H A L L E N G E   0 0 6  ** //
-// **  I S   P A L I N D R O M E   ?  ** //
+// **  L A S T   W O R D  ** //
 
 // Given a string s consisting of words and spaces, return the length of the last word in the string.
 
@@ -255,3 +255,32 @@ function lengthOfLastWord(s) {
 };
 
 console.log('length of last word--', lengthOfLastWord(lastWord2));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 7  ** //
+// **  R E M O V E   E L E M E N T  ** //
+
+// Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The relative order of the elements may be changed.
+
+// Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
+
+// Return k after placing the final result in the first k slots of nums.
+
+// Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
+
+// Example 1
+// Input: nums = [3, 2, 2, 3], val = 3
+// Output: 2, nums = [2, 2, _,  _]
+// Return k = 2 with the first two elements of nums being 2.
+
+// ** NOTE ** Does not matter what you leave behind the returned k (hence why they are underscores). Elements can be returned in any order.
+
+let removeNums1 = [3, 2, 2, 3]; // val = 3... [2, 2, _, _]
+let removeNums2 = [0, 1, 2, 2, 3, 0, 4, 2]; //val = 2 ... [0, 1, 4, 0, 3, _, _, _]
+
+function removeElement(nums, val) {
+
+};
+
+console.log('remove element--', removeElement(removeNums1, 3));
