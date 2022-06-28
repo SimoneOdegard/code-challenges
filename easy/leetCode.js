@@ -344,3 +344,36 @@ function searchInsert(nums, target) {
 };
 
 console.log('search insert--', searchInsert(searchNums, 7));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 9  ** //
+// **  V A L I D   P A R E N T H E S E S  ** //
+
+// Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+//An input string is valid if:
+// --- Open brackets must be closed by the same type of brackets.
+// --- Open brackets must be closed in the correct order.
+
+// Example 1:
+// Input: s = "()"
+// Output: true
+
+// Example 2:
+// Input: s = "()[]{}"
+// Output: true
+
+// Example 3:
+// Input: s = "(]"
+// Output: false
+
+let parenStr1 = '()'; // true
+let parenStr2 = '()[]{}'; // true 
+let parentStr3 = '(]'; // false
+
+function validParentheses(s) {
+
+};
+
+console.log('valid parenteses--', validParentheses(parenStr1));

@@ -9,6 +9,7 @@
 // 006 Find Last Word
 // 007 Remove Element
 // 008 Search Insert Position
+// 009 Valid Parentheses
 
 
 // ======================================================= //
@@ -72,3 +73,21 @@
 // Return k after placing the final result in the first k slots of nums.
 
 // Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 8  ** //
+// **  S E A R C H   I N S E R T   P O S I T I O N  ** //
+
+// Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 0 9  ** //
+// **  V A L I D   P A R E N T H E S E S  ** //
+
+// Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+//An input string is valid if:
+// --- Open brackets must be closed by the same type of brackets.
+// --- Open brackets must be closed in the correct order.
