@@ -330,7 +330,17 @@ console.log('remove element--', removeElement(removeNums2, 2));
 let searchNums = [1, 3, 5, 6];
 
 function searchInsert(nums, target) {
-
+  let count = 0;
+  for (let i = 0; i < nums.length; i++) {
+    count++;
+    if (nums[i] === target) {
+      return i;
+    }
+    if (nums[i] > target) {
+      return i;
+    }
+  }
+  return count;
 };
 
-console.log('search insert--', searchInsert(searchNums, 5));
+console.log('search insert--', searchInsert(searchNums, 7));
