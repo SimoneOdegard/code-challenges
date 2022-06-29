@@ -370,10 +370,23 @@ console.log('search insert--', searchInsert(searchNums, 7));
 
 let parenStr1 = '()'; // true
 let parenStr2 = '()[]{}'; // true 
-let parentStr3 = '(]'; // false
+let parenStr3 = '(]'; // false
+
+// ** REVISIT - works on here but doesn't pass leetcode challenges. research hashmaps? i've seen other peoplle use Object.freeze
 
 function validParentheses(s) {
-
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === '(' && s[i + 1] === ')') { 
+      return 'true';
+    }
+    if (s[i] === '[' && s[i + 1] === ']') {
+      return 'true';
+    }
+    if (s[i] === '{' && s[i + 1] === '}') {
+      return 'true';
+    }
+    else return 'false';
+  }
 };
 
-console.log('valid parenteses--', validParentheses(parenStr1));
+console.log('valid parenteses--', validParentheses(parenStr3));
