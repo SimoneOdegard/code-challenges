@@ -390,3 +390,62 @@ function validParentheses(s) {
 };
 
 console.log('valid parenteses--', validParentheses(parenStr3));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 0  ** //
+// **  P L U S   O N E  ** //
+
+// You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+
+// Increment the large integer by one and return the resulting array of digits.
+
+// Example 1:
+// Input: digits = [1,2,3]
+// Output: [1,2,4]
+// Explanation: The array represents the integer 123.
+// Incrementing by one gives 123 + 1 = 124.
+// Thus, the result should be [1,2,4].
+
+// Example 2:
+// Input: digits = [4,3,2,1]
+// Output: [4,3,2,2]
+// Explanation: The array represents the integer 4321.
+// Incrementing by one gives 4321 + 1 = 4322.
+// Thus, the result should be [4,3,2,2].
+
+// Example 3:
+// Input: digits = [9]
+// Output: [1,0]
+// Explanation: The array represents the integer 9.
+// Incrementing by one gives 9 + 1 = 10.
+// Thus, the result should be [1,0].
+
+let plusOneDigits1 = [1, 2, 5]; // [1, 2, 6]
+let plusOneDigits2 = [4, 3, 2, 1]; // [4, 3, 2, 2]
+let plusOneDigits3 = [9]; // [1, 0]
+
+// ** REVISIT - doesn't fully work. if the last element in the array appears earlier, it will not work. also didn't think of this but if it's 29, 39, etc, it will not work unless the answer is that anything ending in 9 would push [1,0] to the array.
+
+function plusOne(digits) {
+  let answer = [];
+  let withOne = 0;
+  for (let i = 0; i < digits.length; i++) {
+    if (digits[i] !== digits[digits.length - 1]) {
+      answer.push(digits[i]);
+    }
+    if (digits[i] === digits[digits.length - 1]) {
+      withOne = digits[i] + 1;
+      if (withOne > 9) {
+        answer.push(1);
+        answer.push(0);
+      }
+      if (withOne < 9)  {
+        answer.push(withOne);
+      }
+    }
+  }
+  return answer;
+};
+
+console.log('plus one--', plusOne(plusOneDigits4));

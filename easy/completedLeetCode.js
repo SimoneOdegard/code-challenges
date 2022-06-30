@@ -10,6 +10,7 @@
 // 007 Remove Element
 // 008 Search Insert Position
 // 009 Valid Parentheses
+// 010 Plus One
 
 
 // ======================================================= //
@@ -91,3 +92,12 @@
 //An input string is valid if:
 // --- Open brackets must be closed by the same type of brackets.
 // --- Open brackets must be closed in the correct order.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 0  ** //
+// **  P L U S   O N E  ** //
+
+// You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+
+// Increment the large integer by one and return the resulting array of digits.
