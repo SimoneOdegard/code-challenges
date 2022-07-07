@@ -12,6 +12,7 @@
 // 009 Valid Parentheses
 // 010 Plus One
 // 011 Climb Stairs
+// 012 Single Number
 
 
 // ======================================================= //
@@ -111,3 +112,12 @@
 // You are climbing a staircase. It takes n steps to reach the top.
 
 // Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 2  ** //
+// **  S I N G L E   N U M B E R  ** //
+
+// Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+// You must implement a solution with a linear runtime complexity and use only constant extra space.
