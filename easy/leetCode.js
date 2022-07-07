@@ -448,7 +448,7 @@ function plusOne(digits) {
   return answer;
 };
 
-console.log('plus one--', plusOne(plusOneDigits4));
+console.log('plus one--', plusOne(plusOneDigits3));
 
 // ======================================================= //
 
@@ -474,11 +474,27 @@ console.log('plus one--', plusOne(plusOneDigits4));
 // 2. 1 step + 2 steps
 // 3. 2 steps + 1 step
 
-let staircase1 = 2; // 2
-let staircase2 = 3; // 3
+// 5 = 8
+// 6 = 13
 
 function climbStairs(n) {
+  if (0 < n && n < 4) {
+    return n;
+  }
+  if (n <= 0) {
+    return 0;
+  }
 
+  let temp = 0;
+  let one = 1;
+  let two = 2;
+
+  for (let i = 3; i <= n; i++) {
+    temp = one + two;
+    one = two;
+    two = temp;
+  }
+  return temp;
 };
 
-console.log('climb stairs--', climbStairs(staircase1));
+console.log('climb stairs--', climbStairs(3));
