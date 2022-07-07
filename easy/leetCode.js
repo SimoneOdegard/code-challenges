@@ -498,3 +498,34 @@ function climbStairs(n) {
 };
 
 console.log('climb stairs--', climbStairs(3));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 2  ** //
+// **  S I N G L E   N U M B E R  ** //
+
+// Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+// You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+// Example 1:
+// Input: nums = [2,2,1]
+// Output: 1
+
+// Example 2:
+// Input: nums = [4,1,2,1,2]
+// Output: 4
+
+// Example 3:
+// Input: nums = [1]
+// Output: 1
+
+let single1 = [2,2,1] // 1
+let single2 = [4,1,2,1,2] // 4
+let single3 = [1] // 1
+
+function singleNumber(nums) {
+
+};
+
+console.log('single number--', singleNumber(single1))
