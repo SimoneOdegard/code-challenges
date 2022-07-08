@@ -13,6 +13,7 @@
 // 010 Plus One
 // 011 Climb Stairs
 // 012 Single Number
+// 013 Single Number Part 2
 
 
 // ======================================================= //
@@ -119,5 +120,14 @@
 // **  S I N G L E   N U M B E R  ** //
 
 // Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+// You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 3  ** //
+// **  S I N G L E   N U M B E R   2  ** //
+
+// Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it.
 
 // You must implement a solution with a linear runtime complexity and use only constant extra space.

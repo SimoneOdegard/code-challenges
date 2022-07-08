@@ -525,7 +525,13 @@ let single2 = [4,1,2,1,2] // 4
 let single3 = [1] // 1
 
 function singleNumber(nums) {
-
+  let sorted = nums.sort((a,b) => a - b);
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i] !== sorted[i + 1]) {
+      return sorted[i];
+    }
+    i++;
+  }
 };
 
-console.log('single number--', singleNumber(single1))
+console.log('single number--', singleNumber(single2));
