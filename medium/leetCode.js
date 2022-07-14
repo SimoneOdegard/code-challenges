@@ -58,23 +58,6 @@ let singleThree3 = [0, 1]; // [1, 0]
 let singleThree4 = [ 0, 1, 1, 2 ]; // [0, 2]
 let singleThree5 = [ 0, 1, 2, 2 ]; // [0, 1]
 
-// function singleNumberThree(nums) {
-//   let answer = [];
-//   let sorted = nums.sort((a,b) => a - b);
-//   console.log(sorted);
-//   for (let i = 0; i < sorted.length; i++) {
-//     if (sorted[i] !== sorted[i + 1]) {
-//       answer.push(sorted[i]);
-//     }
-//     if (sorted[i] !== sorted[i + 1] && sorted[i] !== sorted[sorted.length - 1]) {
-//       answer.push(sorted[sorted.length - 1]);
-//       return answer;
-//     }
-//     i++;
-//   }
-//   return answer;
-// };
-
 function singleNumberThree(nums) {
   let answer = [];
   let sorted = nums.sort((a,b) => a - b);
