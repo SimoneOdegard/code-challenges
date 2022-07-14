@@ -16,6 +16,7 @@
 // 013 Single Number Part 2
 // 014 Find the Difference
 // 015 Missing Number
+// 016 Single Number Part 3
 
 
 // ======================================================= //
@@ -149,3 +150,12 @@
 // **  M I S S I N G   N U M B E R  ** //
 
 // Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 6  ** //
+// **  S I N G L E   N U M B E R   3  ** //
+
+// Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.
+
+// You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.

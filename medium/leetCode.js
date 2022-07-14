@@ -19,7 +19,45 @@ let singleTwo1 = [2, 2, 3, 2]; //3
 let singleTwo2 = [0,1,0,1,0,1,99]; //99
 
 function singleNumberTwo(nums) {
-
+  let sorted = nums.sort((a,b) => a - b);
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i] !== sorted[i + 1] && sorted[i] !== sorted[i + 2]) {
+      return sorted[i];
+    }
+    i = i + 2;
+  }
 };
 
-console.log('singled number 2--', singledNumberTwo(singleTwo1));
+console.log('singled number 2--', singleNumberTwo(singleTwo2));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 6  ** //
+// **  S I N G L E   N U M B E R   3  ** //
+
+// Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.
+
+// You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.
+
+// Example 1:
+// Input: nums = [1,2,1,3,2,5]
+// Output: [3,5]
+// Explanation:  [5, 3] is also a valid answer.
+
+// Example 2:
+// Input: nums = [-1,0]
+// Output: [-1,0]
+
+// Example 3:
+// Input: nums = [0,1]
+// Output: [1,0]
+
+let singleThree1 = [1,2,1,3,2,5]; // [3, 5]
+let singleThree2 = [-1, 0]; // [-1, 0]
+let singleThree3 = [0, 1]; // [1, 0]
+
+function singleNumberThree(nums) {
+  
+};
+
+console.log('single number 3--', singleNumberThree(singleThree1));
