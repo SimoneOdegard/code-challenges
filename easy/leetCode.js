@@ -621,3 +621,75 @@ function missingNumber(nums) {
 };
 
 console.log('missing number--', missingNumber(missingNum4));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 7  ** //
+// **  C O N T A I N S   D U P L I C A T E  ** //
+
+// Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+// Example 1:
+// Input: nums = [1,2,3,1]
+// Output: true
+
+// Example 2:
+// Input: nums = [1,2,3,4]
+// Output: false
+
+// Example 3:
+// Input: nums = [1,1,1,3,3,4,3,2,4,2]
+// Output: true
+
+let dupNums1 = [1, 2, 3, 1]; // true
+let dupNums2 = [1, 2, 3, 4]; // false
+let dupNums3 = [1,1,1,3,3,4,3,2,4,2]; // true
+let dupNums4 = [2,14,18,22,22]; // true
+let dupNums5 = [8]; // false
+let dupNums6 = [1,2,3,1]; // true
+
+function containsDuplicate(nums) {
+  if (nums.length <= 1) {
+    return false;
+  }
+
+  nums = nums.sort((a, b) => a - b);
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === nums[i+1]) {
+      return true;
+    }
+  }
+  return false;
+};
+
+console.log('contains duplicate--', containsDuplicate(dupNums6));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 8  ** //
+// **  C O N T A I N S   D U P L I C A T E   2  ** //
+
+// Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+
+// Example 1:
+// Input: nums = [1,2,3,1], k = 3
+// Output: true
+
+// Example 2:
+// Input: nums = [1,0,1,1], k = 1
+// Output: true
+
+// Example 3:
+// Input: nums = [1,2,3,1,2,3], k = 2
+// Output: false
+
+let dupNumsTwo1 = [1, 2, 3, 1]; // k = 3 ... true
+let dupNumsTwo2 = [1, 0, 1, 1]; // k = 1 ... true
+let dupNumsTwo3 = [1,2,3,1,2,3]; // k = 2 ... false
+
+function containsNearbyDuplicate(nums, k) {
+
+};
+
+console.log('contains nearby duplicate--', containsNearbyDuplicate(dupNumsTwo1, 3));

@@ -17,6 +17,8 @@
 // 014 Find the Difference
 // 015 Missing Number
 // 016 Single Number Part 3
+// 017 Contains Duplicate
+// 018 Contains Duplicate Part 2
 
 
 // ======================================================= //
@@ -159,3 +161,17 @@
 // Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.
 
 // You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 7  ** //
+// **  C O N T A I N S   D U P L I C A T E  ** //
+
+// Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 8  ** //
+// **  C O N T A I N S   D U P L I C A T E   2  ** //
+
+// Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
