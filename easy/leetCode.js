@@ -689,7 +689,14 @@ let dupNumsTwo2 = [1, 0, 1, 1]; // k = 1 ... true
 let dupNumsTwo3 = [1,2,3,1,2,3]; // k = 2 ... false
 
 function containsNearbyDuplicate(nums, k) {
-
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] === nums[j] && Math.abs(i - j) <= k) {
+        return true;
+      }
+    }
+  }
+  return false;
 };
 
-console.log('contains nearby duplicate--', containsNearbyDuplicate(dupNumsTwo1, 3));
+console.log('contains nearby duplicate--', containsNearbyDuplicate(dupNumsTwo3, 2));
