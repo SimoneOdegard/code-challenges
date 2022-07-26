@@ -20,6 +20,7 @@
 // 017 Contains Duplicate
 // 018 Contains Duplicate Part 2
 // 019 Contains Duplicate Part 3
+// 020 Check If N & Its Double Exist
 
 
 // ======================================================= //
@@ -183,3 +184,16 @@
 // **  C O N T A I N S   D U P L I C A T E   3  ** //
 
 // Given an integer array nums and two integers k and t, return true if there are two distinct indices i and j in the array such that abs(nums[i] - nums[j]) <= t and abs(i - j) <= k.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 2 0  ** //
+// **  C H E C K   I F   N   &   I T S   D O U B L E   E X I S T  ** //
+
+// Given an array arr of integers, check if there exists two integers N and M such that N is the double of M ( i.e. N = 2 * M).
+
+// More formally check if there exists two indices i and j such that :
+
+// i != j
+// 0 <= i, j < arr.length
+// arr[i] == 2 * arr[j]
