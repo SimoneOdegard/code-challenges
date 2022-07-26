@@ -19,6 +19,7 @@
 // 016 Single Number Part 3
 // 017 Contains Duplicate
 // 018 Contains Duplicate Part 2
+// 019 Contains Duplicate Part 3
 
 
 // ======================================================= //
@@ -175,3 +176,10 @@
 // **  C O N T A I N S   D U P L I C A T E   2  ** //
 
 // Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 9  ** //
+// **  C O N T A I N S   D U P L I C A T E   3  ** //
+
+// Given an integer array nums and two integers k and t, return true if there are two distinct indices i and j in the array such that abs(nums[i] - nums[j]) <= t and abs(i - j) <= k.

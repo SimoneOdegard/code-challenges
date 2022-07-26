@@ -61,7 +61,6 @@ let singleThree5 = [ 0, 1, 2, 2 ]; // [0, 1]
 function singleNumberThree(nums) {
   let answer = [];
   let sorted = nums.sort((a,b) => a - b);
-  console.log(sorted);
   for (let i = 0; i < sorted.length; i++) {
     if (sorted[i] !== sorted[i + 1]) {
       answer.push(sorted[i]);
@@ -73,3 +72,37 @@ function singleNumberThree(nums) {
 };
 
 console.log('single number 3--', singleNumberThree(singleThree1));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 1 9  ** //
+// **  C O N T A I N S   D U P L I C A T E   3  ** //
+
+// Given an integer array nums and two integers k and t, return true if there are two distinct indices i and j in the array such that abs(nums[i] - nums[j]) <= t and abs(i - j) <= k.
+
+// Example 1:
+// Input: nums = [1,2,3,1], k = 3, t = 0
+// Output: true
+
+// Example 2:
+// Input: nums = [1,0,1,1], k = 1, t = 2
+// Output: true
+
+// Example 3:
+// Input: nums = [1,5,9,1,5,9], k = 2, t = 3
+// Output: false
+
+let dupNums1 = [1,2,3,1];
+let dupNums2 = [1,0,1,1];
+let dupNums3 = [1,5,9,1,5,9];
+
+function containsNearbyAlmostDuplicate(nums, k, t) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (Math.abs(nums[i] - nums[j]) <= t && Math.abs(i - j) <= k) return true;
+    }
+  }
+  return false;
+};
+
+console.log(containsNearbyAlmostDuplicate('almost duplicate--', dupNums1, 3, 0));
