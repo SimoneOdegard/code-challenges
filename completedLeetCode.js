@@ -21,6 +21,7 @@
 // 018 Contains Duplicate Part 2
 // 019 Contains Duplicate Part 3
 // 020 Check If N & Its Double Exist
+// 021 Keep Mulitplying Found Values by Two
 
 
 // ======================================================= //
@@ -197,3 +198,18 @@
 // i != j
 // 0 <= i, j < arr.length
 // arr[i] == 2 * arr[j]
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 2 1  ** //
+// **  K E E P   M U L T I P L Y I N G   F O U N D ** //
+// **  V A L U E S   B Y   T W O  ** //
+
+// You are given an array of integers nums. You are also given an integer original which is the first number that needs to be searched for in nums.
+
+// You then do the following steps:
+
+// If original is found in nums, multiply it by two (i.e., set original = 2 * original).
+// Otherwise, stop the process.
+// Repeat this process with the new number as long as you keep finding the number.
+// Return the final value of original.
