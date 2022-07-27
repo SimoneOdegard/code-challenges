@@ -713,7 +713,6 @@ console.log('contains nearby duplicate--', containsNearbyDuplicate(dupNumsTwo3, 
 // i != j
 // 0 <= i, j < arr.length
 // arr[i] == 2 * arr[j]
- 
 
 // Example 1:
 // Input: arr = [10,2,5,3]
@@ -729,3 +728,35 @@ console.log('contains nearby duplicate--', containsNearbyDuplicate(dupNumsTwo3, 
 // Input: arr = [3,1,7,11]
 // Output: false
 // Explanation: In this case does not exist N and M, such that N = 2 * M.
+
+let checkArr1 = [10,2,5,3]; // true
+let checkArr2 = [7,1,14,11]; // true
+let checkArr3 = [3,1,7,11]; // false
+let checkArr4 = [-2,0,10,-19,4,6,-8]; // false
+let checkArr5 = [-20,8,-6,-14,0,-19,14,4]; // true
+
+// function checkIfExist(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       if (arr[i] * 2 === arr[j] && i !== j) {
+//         return true;
+//       }
+//     }
+//   }
+//   return false;
+// };
+
+// ========== REFACTOR ========== //
+function checkIfExist(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      i++;
+    }
+    if (arr.includes(arr[i]*2)) {
+      return true;
+    }
+  }
+  return false;
+};
+
+console.log('check for n and double--', checkIfExist(checkArr5));
