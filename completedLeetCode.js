@@ -22,6 +22,7 @@
 // 019 Contains Duplicate Part 3
 // 020 Check If N & Its Double Exist
 // 021 Keep Mulitplying Found Values by Two
+// 022 Best Time to Buy & Sell Stock
 
 
 // ======================================================= //
@@ -213,3 +214,15 @@
 // Otherwise, stop the process.
 // Repeat this process with the new number as long as you keep finding the number.
 // Return the final value of original.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 2 2  ** //
+// **  B E S T   T I M E   T O   B U Y  ** //
+// **  &   S E L L   S T O C K  ** //
+
+// You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+// You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+// Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
