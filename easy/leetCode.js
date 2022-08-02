@@ -834,7 +834,15 @@ let stockPrices1 = [7,1,5,3,6,4]; // 5
 let stockPrices2 = [7,6,4,3,1]; // 0
 
 function maxProfit(prices) {
-  
+  let buy = Infinity;
+  let sell = 0;
+  for (let i = 0; i < prices.length; i++) {
+    if (prices[i] < buy) {
+      buy = prices[i];
+    }
+    sell = Math.max(sell, prices[i] - buy);
+  }
+  return sell;
 };
 
 console.log('max profit--', maxProfit(stockPrices1));
