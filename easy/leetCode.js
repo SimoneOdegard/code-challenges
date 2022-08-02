@@ -795,7 +795,13 @@ let multiplyVals1 = [5,3,6,1,12]; // original = 3 ... output 24
 let multiplyVals2 = [2,7,9]; // original = 4 ... output 4
 
 function findFinalValue(nums, original) {
-
+  nums.sort((a,b) => a - b);
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === original) {
+      original = original * 2;
+    }
+  }
+  return original;
 };
 
 console.log('find final value--', findFinalValue(multiplyVals1, 3));
