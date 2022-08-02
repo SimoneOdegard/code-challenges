@@ -846,3 +846,29 @@ function maxProfit(prices) {
 };
 
 console.log('max profit--', maxProfit(stockPrices1));
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 2 3  ** //
+// **  M A J O R I T Y   E L E M E N T  ** //
+
+// Given an array nums of size n, return the majority element.
+
+// The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+// Example 1:
+// Input: nums = [3,2,3]
+// Output: 3
+
+// Example 2:
+// Input: nums = [2,2,1,1,1,2,2]
+// Output: 2
+
+let elementNums1 = [3, 2, 3]; // 3
+let elementNums2 = [2,2,1,1,1,2,2]; // 2
+
+function majorityElement(nums) {
+
+};
+
+console.log('majority elemnt--', majorityElement(elementNums1));

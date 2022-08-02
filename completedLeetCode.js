@@ -23,6 +23,7 @@
 // 020 Check If N & Its Double Exist
 // 021 Keep Mulitplying Found Values by Two
 // 022 Best Time to Buy & Sell Stock
+// 023 Majority Element
 
 
 // ======================================================= //
@@ -226,3 +227,12 @@
 // You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
 
 // Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 2 3  ** //
+// **  M A J O R I T Y   E L E M E N T  ** //
+
+// Given an array nums of size n, return the majority element.
+
+// The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
