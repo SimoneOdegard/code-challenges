@@ -867,8 +867,26 @@ console.log('max profit--', maxProfit(stockPrices1));
 let elementNums1 = [3, 2, 3]; // 3
 let elementNums2 = [2,2,1,1,1,2,2]; // 2
 
+// only works when there are 2 numbers.
+// function majorityElement(nums) {
+//   let count1 = 0;
+//   let count2 = 0;
+//   nums.sort((a,b) => a - b);
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] === nums[0]) {
+//       count1++;
+//     } else if (nums[i] !== nums[0]) {
+//       count2++;
+//     }
+//   }
+//   if (count1 > count2) {
+//     return nums[0];
+//   } else return nums[nums.length-1];
+// };
+
 function majorityElement(nums) {
+  nums.sort((a,b) => a - b);
+  return nums[Math.floor(nums.length/2)];
+}
 
-};
-
-console.log('majority elemnt--', majorityElement(elementNums1));
+console.log('majority elemnt--', majorityElement(elementNums2));
