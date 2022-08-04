@@ -24,6 +24,7 @@
 // 021 Keep Mulitplying Found Values by Two
 // 022 Best Time to Buy & Sell Stock
 // 023 Majority Element
+// 024 Number of 1 Bits
 
 
 // ======================================================= //
@@ -236,3 +237,10 @@
 // Given an array nums of size n, return the majority element.
 
 // The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 2 4  ** //
+// **  N U M B E R   O F   1   B I T S  ** //
+
+// Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
