@@ -917,3 +917,20 @@ console.log('majority elemnt--', majorityElement(elementNums2));
 // Input: n = 11111111111111111111111111111101
 // Output: 31
 // Explanation: The input binary string 11111111111111111111111111111101 has a total of thirty one '1' bits.
+
+let find1bits1 = 00000000000000000000000000001011; // 3
+let find1bits2 = 00000000000000000000000010000000; // 1
+let find1bits3 = 11111111111111111111111111111101; // 31
+
+function hammingWeight(n) {
+  let binary = n.toString(2);
+  let count = 0;
+  for (let i = 0; i < binary.length; i++) {
+    if (binary[i] === '1') {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log('find 1 bits--', hammingWeight(find1bits3));
