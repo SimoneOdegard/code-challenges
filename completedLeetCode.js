@@ -25,6 +25,7 @@
 // 022 Best Time to Buy & Sell Stock
 // 023 Majority Element
 // 024 Number of 1 Bits
+// 025 Happy Number
 
 
 // ======================================================= //
@@ -244,3 +245,17 @@
 // **  N U M B E R   O F   1   B I T S  ** //
 
 // Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
+
+// ======================================================= //
+
+// **  C H A L L E N G E   0 2 5  ** //
+// **  H A P P Y   N U M B E R  ** //
+
+// Write an algorithm to determine if a number n is happy.
+
+// A happy number is a number defined by the following process:
+
+// Starting with any positive integer, replace the number by the sum of the squares of its digits.
+// Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+// Those numbers for which this process ends in 1 are happy.
+// Return true if n is a happy number, and false if not.
