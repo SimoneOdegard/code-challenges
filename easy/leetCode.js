@@ -953,17 +953,37 @@ console.log('find 1 bits--', hammingWeight(find1bits3));
 // Input: n = 19
 // Output: true
 // Explanation:
-// 12 + 92 = 82
-// 82 + 22 = 68
-// 62 + 82 = 100
-// 12 + 02 + 02 = 1
+// 1^2 + 9^2 = 82
+// 8^2 + 2^2 = 68
+// 6^2 + 8^2 = 100
+// 1^2 + 0^2 + 0^2 = 1
 
 // Example 2:
 // Input: n = 2
 // Output: false
 
 function isHappy(n) {
-
+  if (n === 1) {
+    return true;
+  }
+  if (n <= 9 && n !== 1) {
+    return false;
+  }
+  let squared = Math.pow(n, 2);
+  console.log(squared);
+  let split = n.toString().split('').map(Number);
+  console.log('jfolasdjfoiadjsofjao', split);
+  for (let i = 0; i < split; i++) {
+    let first = Math.pow(split[0], 2);
+    console.log(first);
+    let sum = (Math.pow(split[i]), 2) + (Math.pow(split[i+1], 2))
+    console.log(sum);
+    split = sum;
+    if (sum === 1) {
+      return true;
+    }
+  }
+  return false;
 };
 
 console.log('is happy--', isHappy(19));
