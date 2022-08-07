@@ -48,26 +48,21 @@ console.log('two sum', twoSum(nums, target));
 // Input: nums = [1, 1, 2]
 // Output: [1, 2]
 
-// INCOMPETE!!!!!
-
 let arr = [1, 1, 2]
 
-var removeDuplicates = function (arr) {
-  // create new empty array to put numbers that are not duplicates into
-  let result = [];
-
-  // loop through the array
-  for (let i = 0; i < arr; i++) {
-
-    // if statement. if the number at x index is not equal to the number at x index - 1 then push that number into the new array. return the new array
-    if (arr[i] != arr[i - 1]) {
-      result.push(arr[i]);
-      return result;
+var removeDuplicates = function (nums) {
+  let len = nums.length;
+  for (let i = 0; i < len; i++) {
+    if (nums[i] === nums[i + 1]) {
+      nums.splice(i + 1, 1);
+      i--;
+      len--;
     }
   }
+  return nums.length;
 };
 
-console.log('remove duplicates', removeDuplicates(arr));
+console.log('remove duplicates--', removeDuplicates(arr));
 
 // ======================================================= //
 
@@ -937,53 +932,11 @@ console.log('find 1 bits--', hammingWeight(find1bits3));
 
 // ======================================================= //
 
-// **  C H A L L E N G E   0 2 5  ** //
+// **  C H A L L E N G E   0 2 6  ** //
 // **  H A P P Y   N U M B E R  ** //
 
-// Write an algorithm to determine if a number n is happy.
-
-// A happy number is a number defined by the following process:
-
-// Starting with any positive integer, replace the number by the sum of the squares of its digits.
-// Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
-// Those numbers for which this process ends in 1 are happy.
-// Return true if n is a happy number, and false if not.
-
-// Example 1:
-// Input: n = 19
-// Output: true
-// Explanation:
-// 1^2 + 9^2 = 82
-// 8^2 + 2^2 = 68
-// 6^2 + 8^2 = 100
-// 1^2 + 0^2 + 0^2 = 1
-
-// Example 2:
-// Input: n = 2
-// Output: false
-
 function isHappy(n) {
-  if (n === 1) {
-    return true;
-  }
-  if (n <= 9 && n !== 1) {
-    return false;
-  }
-  let squared = Math.pow(n, 2);
-  console.log(squared);
-  let split = n.toString().split('').map(Number);
-  console.log('jfolasdjfoiadjsofjao', split);
-  for (let i = 0; i < split; i++) {
-    let first = Math.pow(split[0], 2);
-    console.log(first);
-    let sum = (Math.pow(split[i]), 2) + (Math.pow(split[i+1], 2))
-    console.log(sum);
-    split = sum;
-    if (sum === 1) {
-      return true;
-    }
-  }
-  return false;
+
 };
 
 console.log('is happy--', isHappy(19));
